@@ -164,7 +164,8 @@ input {
     left: 0;
     top: 0; 
     height: 100%; 
-    overflow-x: auto; 
+    width: 100%;
+    overflow: auto; 
     background-color: #ab9faa;
     padding-top: 50px;
 }
