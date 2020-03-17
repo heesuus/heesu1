@@ -10,7 +10,7 @@
         src="https://kit.fontawesome.com/023b04ac09.js" crossorigin="anonymous"
     ></script>
     <script src="main.js" defer></script>
-    <title>Nav bar</title>
+    <title>Heesuus</title>
 </head>
 <body>
     <nav class="navbar">
@@ -41,10 +41,38 @@
         </li>
         <li class="moreInfo">
             <div class="loginLetter">Register to see more!</div>
-            <button class="loginBtn">
-                <div>Click me</div>
+            <button class="loginBtn" type="button"
+            onclick="document.getElementById('userId').style.display='block'" style="width: auto;">
+                Click me
             </button>
         </li>
     </ul>
+
+    <div id="userId" class="modal">
+        <span onclick="document.getElementById('userId').style.display='none'" class="close" title="Close Modal">
+            &times;  <!--&times는 close icon-->
+        </span>
+        <form class="modal-content" action="/action_page.php">
+            <div class="container">
+                <p>Please fill in this form for more information.</p>
+                <hr>
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Enter Your Email" required>
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" required>
+
+                <div class="checkInfo">
+                    <button class="cancelBtn" type="button" 
+                    onclick="document.getElementById('userId').style.display='none'">
+                        Cancel
+                    </button>
+                    <button class="signupBtn" type="submit">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
